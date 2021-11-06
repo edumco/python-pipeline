@@ -38,19 +38,10 @@ Its a good practicie use a exclusive requiremts file for the testing because the
 So we create a second file called requirements-test.txt in the sample aplication folder.
 
 ```python
-# Pytest dependency tree for pytest==5.4.1
-attrs==19.3.0
-importlib-metadata==1.5.0
-more-itertools==8.2.0
-packaging==20.3
-pluggy==0.13.1
-py==1.8.1
-pyparsing==2.4.6
-six==1.14.0
-wcwidth==0.1.8
-zipp==3.1.0
-
-    pytest==5.4.1
+bandit==1.7.0
+pylama==7.7.1
+pytest==6.2.5
+pytest-xdist==2.4.0
 ```
 
 The contents of this file are dependencies from the package `pytest` listed with the dependencies ccomming first and the dependants last.
