@@ -51,10 +51,11 @@ The contents of this file are packages used to run the tests (`pytest` and `pyte
 On the Dockerfile we create a new layer reusing the requirement layer and naming it as test. Then we copy the app code, install the test requirements and execute the tests:
 
 ```Dockerfile
-FROM python:3.8-slim as requirements
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
+WORKDIR /app 
 
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt && pip check
 
 FROM requirements as test
 
