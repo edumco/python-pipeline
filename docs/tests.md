@@ -35,7 +35,7 @@ junit_family=legacy
 
 Its a good practicie use a exclusive requiremts file for the testing because these tools should not be package together with the application.
 
-So we create a second file called requirements-test.txt in the sample aplication folder.
+So we create a second requirements file in the test folder.
 
 ```python
 bandit==1.7.0
@@ -44,11 +44,11 @@ pytest==6.2.5
 pytest-xdist==2.4.0
 ```
 
-The contents of this file are dependencies from the package `pytest` listed with the dependencies ccomming first and the dependants last.
+The contents of this file are packages used to run the tests (`pytest` and `pytest-xdist`) and verify the code (`pylama` and `bandit`).
 
 ## Dockerfile layer
 
-On the Dockerfile we create a new layer reusing the requirement layer and naming it as test. Then we copy the app code and execute the tests:
+On the Dockerfile we create a new layer reusing the requirement layer and naming it as test. Then we copy the app code, install the test requirements and execute the tests:
 
 ```Dockerfile
 FROM python:3.8-slim as requirements
@@ -57,10 +57,12 @@ RUN pip install -r /tmp/requirements.txt
 
 
 FROM requirements as test
+
 COPY src /app
-RUN mkdir /reports
-WORKDIR /app
-RUN pytest --junit-xml=/reports/unit.xml
+
+RUN pip install -r /test/requirements.txt
+
+RUN pytest -n 4
 ```
 
 The command who execute the tests is
