@@ -3,5 +3,5 @@
 # When a new version is released the dependabot makes a PR
 
 pip==21.3.1
-setuptools==58.5.3
+setuptools==59.2.0
 wheel==0.37.0
