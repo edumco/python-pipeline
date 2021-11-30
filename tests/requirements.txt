@@ -1,4 +1,4 @@
 bandit==1.7.1
-pylama==8.1.4
+pylama==8.2.0
 pytest==6.2.5
 pytest-xdist==2.4.0
