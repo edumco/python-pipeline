@@ -2,12 +2,6 @@
 
 Simple Docker pipeline to test your python code.
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-## About
-
-Although several pipeline solutions exist, they are too complex for small projects. With this solution you just need a Dockerfile.
-
 ## Features
 
 In this repo i've add a very basic python project with only four elements: a requirements file, a Dockerfile, a pytest.ini file and a simple python test that always pass.
@@ -50,4 +44,4 @@ If something goes wrong youll be promptly warned.
 
 ## License
 
-[GNU General Public License v3.0](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
