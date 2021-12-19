@@ -15,21 +15,13 @@ Although several pipeline solutions exist, they are too complex for small projec
 
 In this repo i've add a very basic python project with only four elements: a requirements file, a Dockerfile, a pytest.ini file and a simple python test that always pass.
 
-You can put several stages to your pipeline, but the most common stages are:
+You can put several stages to your pipeline, but the most common stages are: Build, Test, Lint, Report, Tag.
 
-| 1     | 2    | 3    | 4      | 5   |
-| ----- | ---- | ---- | ------ | --- |
-| Build | Test | Lint | Report | Tag |
-
-[Build](docs/dependencies.md): Downloads and build dependencies.
-
-[Test](docs/tests.md): Executes all tests found.
-
-[Lint](docs/lint.md): Checks code style and bad code practicies.
-
-[Report](docs/reports.md): Exports the results to archiving.
-
-[Tag](docs/tagging.md): Adds a unique identifier to the version.
+1. [Build](docs/dependencies.md): Downloads and build dependencies.
+2. [Test](docs/tests.md): Executes all tests found.
+3. [Lint](docs/lint.md): Checks code style and bad code practicies.
+4. [Report](docs/reports.md): Formats and exports the results to archiving.
+5. [Tag](docs/tagging.md): Adds a unique identifier to the version making it ready to release.
 
 ## Installation
 
