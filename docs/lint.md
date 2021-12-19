@@ -1,12 +1,14 @@
 # Lint
 
+Lint is the common name used to the [Static Program Analysis](https://en.wikipedia.org/wiki/Static_program_analysis) process witch consists on an automated scan of your source code in search of bad practicies or misuse of code conventions.
+
 ## Choosing the rules
 
 There are several sets of linting rules for every program language. For Python theese rules are defiened in a document [called PEP8](https://pep8.org/).
 
 The more rules better results, so a good start point is the Pylama package that combines several linters together.
 
-To understand python linterd I suggest you to read the article:
+To understand python linter I suggest you to read the article:
 
 [Python Code Quality: Tools & Best Practices](https://realpython.com/python-code-quality/#style-guides)
 
