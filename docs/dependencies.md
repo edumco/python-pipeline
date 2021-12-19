@@ -22,22 +22,22 @@ Ex: Imagine a dependency that is on version 8.0
 
 If you use a dependency that dont fix its dependencies you'll still not getting a reproducible image.
 
-Imagine a project that depends on "external-package" in version 3.2.1, its requirements would be likef this rule, use a consistent style (either indenting or code fences).:
+Imagine a project that depends on "external-package" in version 3.2.1
 
 ```python
 external-package==3.2.1
 ```
 
-But if we look at this package requirements we find
+But if we look inside this package requirements we find
 
 ```python
 ...
-six ≧ 0.8
+secondary-dependency ≧ 0.8
 ```
 
-This depency will change ef this rule, use a consistent style (either indenting or code fences).ion 1.14 but you developed and tested your project on version 1.12 and cannot risk jump to the latest version now.
+Whenever `secondary-dependency` releases a new version your build **will change** and this can break your software. To fix this problem, you can freeze your dependency tree so you'll always get the same results. 
 
-To fix this probyourlem you can freeze your dependency tree so you'll always get the same results. In the root of your project use the command:
+In the root of your project use the command:
 
 ```sh
 pip freeze > requirements.txt
