@@ -17,17 +17,15 @@ In this repo i've add a very basic python project with only four elements: a req
 
 You can put several stages to your pipeline, but the most common stages are:
 
-| 1     | 2    | 3    | 4        | 5      | 6   |
-| ----- | ---- | ---- | -------- | ------ | --- |
-| Build | Test | Lint | Analisys | Report | Tag |
+| 1     | 2    | 3    | 4      | 5   |
+| ----- | ---- | ---- | ------ | --- |
+| Build | Test | Lint | Report | Tag |
 
 [Build](docs/dependencies.md): Downloads and build dependencies.
 
 [Test](docs/tests.md): Executes all tests found.
 
-[Lint](docs/lint.md): Checks code style and format.
-
-[Analisys](docs/static-analisys.md): Checks for bad code practicies.
+[Lint](docs/lint.md): Checks code style and bad code practicies.
 
 [Report](docs/reports.md): Exports the results to archiving.
 
