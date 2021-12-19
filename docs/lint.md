@@ -8,9 +8,7 @@ There are several sets of linting rules for every program language. For Python t
 
 The more rules better results, so a good start point is the Pylama package that combines several linters together.
 
-To understand python linter I suggest you to read the article:
-
-[Python Code Quality: Tools & Best Practices](https://realpython.com/python-code-quality/#style-guides)
+To understand python linter I suggest you to read the article "Python Code Quality" at [realpython.com/python-code-quality/](https://realpython.com/python-code-quality/)
 
 See the example below:
 
