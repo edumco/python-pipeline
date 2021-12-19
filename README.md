@@ -3,8 +3,6 @@
 Simple Docker pipeline to test your python code.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Build Status](https://travis-ci.com/edumco/python-pipeline-example.svg?branch=master)](https://travis-ci.com/edumco/python-pipeline-example)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/edumco/python-pipeline-example)
 
 ## About
 
