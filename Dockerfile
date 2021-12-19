@@ -1,6 +1,6 @@
 FROM python:3.10.1-alpine3.14 as requirements
 
-WORKDIR /app 
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 
@@ -16,9 +16,9 @@ RUN pip install -r tests/requirements.txt && pip check
 
 COPY . /app
 
-RUN python -m bandit --skip B101 -r tests
+RUN pytest --html=results.html 
 
-RUN pytest -n 4
+RUN bandit --skip B101 -r tests
 
 RUN pylama --verbose --linters pydocstyle,pycodestyle,pyflakes tests/
 
@@ -26,7 +26,6 @@ RUN pylama --verbose --linters pydocstyle,pycodestyle,pyflakes tests/
 
 FROM requirements as production
 
-# Copy only the modules from the source
 COPY module /module
 
 WORKDIR /module
