@@ -1,4 +1,4 @@
-FROM python:3.10.2-alpine3.14 as requirements
+FROM python:3.11.0a6-alpine3.14 as requirements
 
 WORKDIR /app
 
